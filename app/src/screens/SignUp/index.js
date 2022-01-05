@@ -11,6 +11,8 @@ import {
   SignMessageButtonTextBold,
 } from './styles';
 
+import Api from '../../Api.js';
+
 import SignInput from '../../components/SignInput';
 
 import BarberLogo from '../../assets/barber.svg';
@@ -25,7 +27,18 @@ export default () => {
   const [emailField, setEmailField] = useState('');
   const [passwordField, setPasswordField] = useState('');
 
-  const handleSignClick = () => {};
+  const handleSignClick = async () => {
+    if (nameField != '' && emailField != '' && passwordField != '') {
+      let res = await Api.signUp(nameField, emailField, passwordField);
+      if (res.token) {
+        alert('DEU CERTO!');
+      } else {
+        alert('Erro: ' + res.error);
+      }
+    } else {
+      alert('Preencha os campos');
+    }
+  };
 
   const handleMessageButtonClick = () => {
     navigation.reset({
@@ -60,7 +73,7 @@ export default () => {
         />
 
         <CustomButton onPress={handleSignClick}>
-          <CustomButtonText>LOGIN</CustomButtonText>
+          <CustomButtonText>CADASTRAR</CustomButtonText>
         </CustomButton>
       </InputArea>
 
