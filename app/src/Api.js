@@ -2,7 +2,7 @@ const BASE_API = 'https://api.b7web.com.br/devbarber/api';
 
 export default {
   checkToken: async token => {
-    const req = await fetch(`${BASE_API}/refresh`, {
+    const req = await fetch(`${BASE_API}/auth/refresh`, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
