@@ -63,7 +63,7 @@ export default () => {
       lng = coords.lng;
     }
 
-    let res = await Api.getBarbers(lat, lng);
+    let res = await Api.getBarbers(lat, lng, locationText);
     if (res.error == '') {
       if (res.loc) {
         setLocationText(res.loc);
