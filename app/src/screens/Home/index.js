@@ -120,8 +120,8 @@ export default () => {
         {loading && <LoadingIcon size="large" color="#FFFFFF" />}
 
         <ListArea>
-          {list.map((item, k) => (
-            <BarberItem key={k} data={item} />
+          {list.map(item => (
+            <BarberItem key={`barber-item${item.id}`} data={item} />
           ))}
         </ListArea>
       </Scroller>

@@ -32,7 +32,7 @@ export default ({stars, showNumber}) => {
   return (
     <StarArea>
       {s.map((i, k) => (
-        <StarView>
+        <StarView key={k}>
           {i === 0 && <StarEmpty width="18px" height="18px" fill="#FF9200" />}
           {i === 1 && <StarHalf width="18px" height="18px" fill="#FF9200" />}
           {i === 2 && <StarFull width="18px" height="18px" fill="#FF9200" />}

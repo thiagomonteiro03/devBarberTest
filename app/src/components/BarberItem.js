@@ -55,7 +55,7 @@ export default ({data}) => {
       <InfoArea>
         <UserName>{data.name}</UserName>
 
-        <Stars stars={data.stars} showNumber={true} />
+        <Stars stars={data.stars} showNumber={true} key={data.id} />
 
         <SeeProfileButton>
           <SeeProfileButtonText>Ver Perfil</SeeProfileButtonText>
