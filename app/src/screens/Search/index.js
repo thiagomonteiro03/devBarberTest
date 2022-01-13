@@ -9,9 +9,9 @@ import Api from '../../Api';
 import {
   Container,
   Scroller,
-  LocationArea,
-  LocationInput,
-  LocationFinder,
+  SearchArea,
+  SearchInput,
+  SearchFinder,
   LoadingIcon,
   ListArea,
 } from './styles';
@@ -89,7 +89,7 @@ export default () => {
     setRefreshing(false);
   };
 
-  const handleLocationSearch = () => {
+  const handleBarberSearch = () => {
     getBarbers();
   };
 
@@ -99,17 +99,17 @@ export default () => {
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }>
-        <LocationArea>
-          <LocationInput
+        <SearchArea>
+          <SearchInput
             placeholder="Procure por algum barbeiro..."
             placeholderTextColor="#FFFFFF"
             onChangeText={t => setSearchTerm(t)}
-            onEndEditing={handleLocationSearch}
+            onEndEditing={handleBarberSearch}
           />
-          <LocationFinder onPress={handleLocationSearch}>
+          <SearchFinder onPress={handleBarberSearch}>
             <SearchIcon width="24" height="24" fill="#FFFFFF" />
-          </LocationFinder>
-        </LocationArea>
+          </SearchFinder>
+        </SearchArea>
         {loading && <LoadingIcon size="large" color="#FFFFFF" />}
 
         <ListArea>

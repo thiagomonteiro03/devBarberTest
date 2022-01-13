@@ -1,11 +1,12 @@
 import React from 'react';
-import {Text} from 'react-native';
-import {Container} from './styles';
+import {Container, CenterText} from './styles';
 
 export default () => {
   return (
     <Container>
-      <Text>Appointments</Text>
+      <CenterText>
+        Não tenho acesso o suficiente a API para exibir essa tela :(
+      </CenterText>
     </Container>
   );
 };
