@@ -234,7 +234,7 @@ export default ({show, setShow, user, service}) => {
       user.id &&
       service != null &&
       selectedYear > 0 &&
-      selectedMonth > 0 &&
+      selectedMonth >= 0 &&
       selectedDay > 0 &&
       selectedHour != null
     ) {
@@ -248,11 +248,21 @@ export default ({show, setShow, user, service}) => {
       );
       if (res.error == '') {
         setShow(false);
+        navigation.navigate('Appointments');
       } else {
         alert(res.error);
       }
       setShow(false);
     } else {
+      console.log(
+        'textando',
+        user.id,
+        service,
+        selectedYear,
+        selectedMonth,
+        selectedDay,
+        selectedHour,
+      );
       alert('Preencha todos os dados.');
     }
   };
