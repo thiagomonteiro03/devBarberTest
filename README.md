@@ -1,9 +1,9 @@
 # devBarberTest
-Um projeto desenvolvido para aprimorar minhas habilidades em React Native para desenvolvimento mobile híbrido.
+An project developed for improve my skills with React Native for hybrid mobile app development.
 
 # Overview :book:
  <p>
-  devBarber é um aplicativo que permite o usuário agendar algum serviço com o seu barbeiro favorito e também gerenciar seus barbeiros favoritos e verificar horário disponível.
+ DevBarber is an app that allows the user to schedule a service with their favorite barber and also manage your favorite barbers and check available hours.
   </p>
 
 # How to use :fire:
