@@ -1,4 +1,4 @@
-# devBarberTest
+# DevBarberTest
 An project developed for improve my skills with React Native for hybrid mobile app development.
 
 # Overview :book:
