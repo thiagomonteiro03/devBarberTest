@@ -11,7 +11,7 @@ export const Container = styled.SafeAreaView`
 export const ProfileArea = styled.SafeAreaView`
   width: 100px;
   height: 100px;
-  margin: 70px;
+  margin: 80px;
   background-color: #ffffff;
   border-radius: 140px;
   align-items: center;
@@ -19,8 +19,7 @@ export const ProfileArea = styled.SafeAreaView`
 `;
 
 export const ProfileTextMain = styled.Text`
-  width: 180px;
-  margin: 40px;
+  margin: 30px;
   font-size: 24px;
   font-weight: bold;
 `;
